@@ -2,6 +2,8 @@
 <ul>
   <% @lists.each do |list| %>
     <li><%= link_to list.name, list_path(list) %></li>
+<img src="<%= cl_image_path list.photo.key, height: 300, crop: :fill %>" alt="">
+
   <% end %>
 </ul>
 <%= link_to "create new list", new_list_path%>
